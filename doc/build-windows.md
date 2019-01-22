@@ -86,7 +86,7 @@ The next three steps are an example of how to acquire the source in an appropria
 
     cd /usr/src
     sudo git clone https://github.com/yavwa/Shilling.git
-    sudo chmod -R a+rw shillingcoin
+    sudo chmod -R a+rw Shilling
 
 Once the source code is ready the build steps are below.
 
@@ -124,7 +124,7 @@ The next three steps are an example of how to acquire the source in an appropria
 
     cd /usr/src
     sudo git clone https://github.com/yavwa/Shilling.git
-    sudo chmod -R a+rw shillingcoin
+    sudo chmod -R a+rw Shilling
 
 Then build using:
 
@@ -156,9 +156,9 @@ Installation
 After building using the Windows subsystem it can be useful to copy the compiled
 executables to a directory on the windows drive in the same directory structure
 as they appear in the release `.zip` archive. This can be done in the following
-way. This will install to `c:\workspace\shillingcoin`, for example:
+way. This will install to `c:\workspace\Shilling`, for example:
 
-    make install DESTDIR=/mnt/c/workspace/shillingcoin
+    make install DESTDIR=/mnt/c/workspace/Shilling
 
 Footnotes
 ---------
