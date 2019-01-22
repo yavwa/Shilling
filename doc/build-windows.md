@@ -98,6 +98,14 @@ Once the source code is ready the build steps are below.
     CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
     make
 
+*******************************************************************************************************************
+On Ununtu 15.10 and above, if your build fails because the cross-compiler does not seem to support C++11 threads (you get errors such as "httpserver.cpp:69:10: error: ‘mutex’ in namespace ‘std’ does not name a type) you may have to select the posix versions of gcc-mingw-w64 and g++-mingw-w64:
+
+    sudo update-alternatives --config x86_64-w64-mingw32-gcc
+    sudo update-alternatives --config x86_64-w64-mingw32-g++
+
+And select the posix version of the compiler.
+*********************************************************************************************************************
 ## Building for 32-bit Windows
 
 To build executables for Windows 32-bit, install the following dependencies:
@@ -127,6 +135,16 @@ Then build using:
     ./autogen.sh # not required when building from tarball
     CONFIG_SITE=$PWD/depends/i686-w64-mingw32/share/config.site ./configure --prefix=/
     make
+
+*******************************************************************************************************************
+On Ununtu 15.10 and above, if your build fails because the cross-compiler does not seem to support C++11 threads (you get errors such as "httpserver.cpp:69:10: error: ‘mutex’ in namespace ‘std’ does not name a type) you may have to select the posix versions of gcc-mingw-w64 and g++-mingw-w64:
+
+    sudo update-alternatives --config x86_64-w64-mingw32-gcc
+    sudo update-alternatives --config x86_64-w64-mingw32-g++
+
+And select the posix version of the compiler.
+*********************************************************************************************************************
+
 
 ## Depends system
 
