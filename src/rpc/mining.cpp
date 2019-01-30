@@ -793,9 +793,9 @@ UniValue estimatefee(const JSONRPCRequest& request)
             );
 
     if (!IsDeprecatedRPCEnabled("estimatefee")) {
-        throw JSONRPCError(RPC_METHOD_DEPRECATED, "estimatefee is deprecated and will be fully removed in v0.17. "
-            "To use estimatefee in v0.16, restart shillingcoind with -deprecatedrpc=estimatefee.\n"
-            "Projects should transition to using estimatesmartfee before upgrading to v0.17");
+        throw JSONRPCError(RPC_METHOD_DEPRECATED, "estimatefee is deprecated and will be fully removed in v1.17. "
+            "To use estimatefee in v1.16.4, restart shillingcoind with -deprecatedrpc=estimatefee.\n"
+            "Projects should transition to using estimatesmartfee before upgrading to v1.17");
     }
 
     RPCTypeCheck(request.params, {UniValue::VNUM});
