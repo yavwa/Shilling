@@ -1192,8 +1192,8 @@ UniValue addmultisigaddress(const JSONRPCRequest& request)
             "  \"address\":\"multisigaddress\",    (string) The value of the new multisig address.\n"
             "  \"redeemScript\":\"script\"         (string) The string value of the hex-encoded redemption script.\n"
             "}\n"
-            "\nResult (DEPRECATED. To see this result in v0.16 instead, please start shillingcoind with -deprecatedrpc=addmultisigaddress).\n"
-            "        clients should transition to the new output api before upgrading to v0.17.\n"
+            "\nResult (DEPRECATED. To see this result in v1.16.4 instead, please start shillingcoind with -deprecatedrpc=addmultisigaddress).\n"
+            "        clients should transition to the new output api before upgrading to v1.17.\n"
             "\"address\"                         (string) A shillingcoin address associated with the keys.\n"
 
             "\nExamples:\n"
@@ -1333,8 +1333,8 @@ UniValue addwitnessaddress(const JSONRPCRequest& request)
     }
 
     if (!IsDeprecatedRPCEnabled("addwitnessaddress")) {
-        throw JSONRPCError(RPC_METHOD_DEPRECATED, "addwitnessaddress is deprecated and will be fully removed in v0.17. "
-            "To use addwitnessaddress in v0.16, restart shillingcoind with -deprecatedrpc=addwitnessaddress.\n"
+        throw JSONRPCError(RPC_METHOD_DEPRECATED, "addwitnessaddress is deprecated and will be fully removed in v1.17. "
+            "To use addwitnessaddress in v1.16.4, restart shillingcoind with -deprecatedrpc=addwitnessaddress.\n"
             "Projects should transition to using the address_type argument of getnewaddress, or option -addresstype=[bech32|p2sh-segwit] instead.\n");
     }
 
@@ -3134,7 +3134,7 @@ UniValue fundrawtransaction(const JSONRPCRequest& request)
                 {"change_type", UniValueType(UniValue::VSTR)},
                 {"includeWatching", UniValueType(UniValue::VBOOL)},
                 {"lockUnspents", UniValueType(UniValue::VBOOL)},
-                {"reserveChangeKey", UniValueType(UniValue::VBOOL)}, // DEPRECATED (and ignored), should be removed in 0.16 or so.
+                {"reserveChangeKey", UniValueType(UniValue::VBOOL)}, // DEPRECATED (and ignored), should be removed in 1.16.4 or so.
                 {"feeRate", UniValueType()}, // will be checked below
                 {"subtractFeeFromOutputs", UniValueType(UniValue::VARR)},
                 {"replaceable", UniValueType(UniValue::VBOOL)},
