@@ -1,5 +1,5 @@
 What is Shilling?
-
+A SEGWIT ACTIVATED COIN
 Shilling is a purely peer-to-peer version of electronic cash that would allow online payments to
 be sent directly from one party to another globally without going through a financial institution.
 A secure, decentralized, publicly managed banking ledger that will use Digital signatures to
